@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #333;
+    overflow: hidden;
+    background-image: url(./universe.jpg);
+
+}
+
+main{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+}

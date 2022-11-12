@@ -1,0 +1,138 @@
+@import url(./reset.css);
+
+/* Rocket Settings */
+
+button {
+
+    position: absolute;
+    bottom: 5%;
+    left: 40%;
+    padding: 10px 25px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    overflow: hidden;
+
+}
+
+button::after,
+button::before {
+
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 5;
+    height: 200px;
+    transform: rotate(30deg);
+    background: rgba(240, 240, 240, 0.211);
+
+}
+
+button::after {
+    width: 25px;
+    left: -40px;
+    top: -90px;
+}
+
+button::before {
+    width: 14px;
+    left: -70px;
+    top: -100px;
+}
+
+@keyframes rtl_move {
+    from {
+        transform: rotate(30deg) translateX(0px);
+    }
+
+    to {
+        transform: rotate(30deg) translateX(200px);
+    }
+}
+
+button:hover::after,
+button:hover::before {
+
+    animation: rtl_move linear .7s;
+
+}
+
+
+button:focus+#rocket {
+    animation: rocket_lanch linear 10s;
+}
+
+/* Rocket */
+
+#rocket {
+
+    height: 50px;
+    width: 90px;
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    transform: rotate(40deg);
+
+}
+
+@keyframes rocket_lanch {
+
+    0% {
+
+        bottom: 4%;
+        rotate: 15deg;
+
+    }
+
+    25% {
+
+        bottom: 20%;
+        left: 4%;
+        rotate: 30deg;
+
+    }
+
+    50% {
+
+        bottom: 47%;
+        left: 20%;
+        rotate: 40deg;
+
+    }
+    55%{
+        bottom: 48%;
+    }
+    60%{
+
+    }
+    65%{
+
+    }
+    70%{
+
+    }
+    75%{
+
+    }
+
+    80% {
+
+        bottom: 20%;
+        left: 75%;
+        rotate: 150deg;
+
+    }
+
+    100% {
+
+        bottom: 2%;
+        left: 90%;
+        rotate: 180deg;
+
+    }
+
+}
